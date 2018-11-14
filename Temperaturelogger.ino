@@ -1,5 +1,5 @@
 /*
- * (C) 2018 Rupert Lenzenweger - aretru.org
+ * (C) 2018 R.L. - aretru.org
  * Temperature Logger for a RTM mold with 4 sensors.
  * As the mold is made of steel and has a high amount of heat capacity
  * changes will not occure very fast. Therefore a measurement every 2
@@ -123,6 +123,8 @@ void loop(void) {
     myDS18B20.requestTemperatures();
     for(byte i=0 ;i < NumberSensorsDS18B20; i++) {
       if (i < myDS18B20.getDeviceCount()) {
+        Temperatur[i] = NoVal; // setting it to NoVal before setting it to
+        // the real value prevents empty values
         Temperatur[i] = myDS18B20.getTempCByIndex(i);
         // DEVICE_DISCONNECTED_C does not work for me
         if (Temperatur[i] == DEVICE_DISCONNECTED_C) {
