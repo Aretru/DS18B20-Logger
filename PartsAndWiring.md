@@ -32,3 +32,7 @@ All sensors are wired to the same connection. With only one wire the 4 sensors a
 * Data: D3
 * 4.7 kOhm Resistor between data pin and 5V
 * GND: GND
+
+## LEDs
+* Green: 7
+* Red: 8
