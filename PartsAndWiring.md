@@ -34,5 +34,5 @@ All sensors are wired to the same connection. With only one wire the 4 sensors a
 * GND: GND
 
 ## LEDs
-* Green: 7
-* Red: 8
+* Green: D7
+* Red: D8
